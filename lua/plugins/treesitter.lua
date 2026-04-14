@@ -1,14 +1,29 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = 'main',
+  lazy = false,
   build = ":TSUpdate",
-  config = function()
-    local configs = require("nvim-treesitter.configs")
-
-    configs.setup({
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "python", "latex", "css", "zig", "rust", "mlir", "jinja", "cmake", "csv", "regex", "norg", "scss", "svelte", "tsx", "typst", "vue"},
-      sync_install = false,
-      highlight = { enable = true },
-      indent = { enable = true },
-    })
-  end
+  main = "nvim-treesitter",
+  opts = {
+    -- Hier trägst du deine benötigten Sprachen ein
+    ensure_installed = { 
+      "c", 
+      "lua", 
+      "vim", 
+      "vimdoc", 
+      "query", 
+      "python", 
+      "rust",
+      "html",
+      "css",
+      "zig",
+      "jinja",
+      "cmake",
+      "csv",
+      "regex",
+      "tsx",
+      "vue"
+    },
+    auto_install = true,
+  },
 }
