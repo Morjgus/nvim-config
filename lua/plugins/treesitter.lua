@@ -8,7 +8,6 @@ return {
     -- Hier trägst du deine benötigten Sprachen ein
     ensure_installed = { 
       "c", 
-      "lua", 
       "vim", 
       "vimdoc", 
       "query", 
@@ -24,6 +23,6 @@ return {
       "tsx",
       "vue"
     },
-    auto_install = true,
+    auto_install = false,
   },
 }
